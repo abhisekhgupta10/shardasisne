@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        *{
+            font-family:Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+ 
+    <nav class="navbar navbar-expand bg-primary px-5">
+      
+          <a class="navbar-brand text-white" href="/">Sharda Sisne Secondary</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
+              </li>
+             
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Class
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">Class 7</a></li>
+                  <li><a class="dropdown-item" href="">Class 8</a></li>
+                  
+                  <li><a class="dropdown-item" href="">Class 9</a></li>
+                  <li><a class="dropdown-item" href="">Class 10</a></li>
+                </ul>
+              </li>
+             
+            </ul>
+           
+          </div>
+        
+      </nav>
+      
+    <h1 class="text-center">Sharda Sisne Secondary School</h1>
+    <p class="text-center">Class:7</p>
+      <div class="container-fluid px-5 mt-2">
+      <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Roll</th>
+            <th scope="col">Name</th>
+            <th scope="col">English</th>
+            <th scope="col">Nepali</th>
+            <th scope="col">Science</th>
+            <th scope="col">Math</th>
+            <th scope="col">Social</th>
+            <th scope="col">Eph</th>
+            <th scope="col">Opt Math</th>
+            <th scope="col">Health</th>
+            <th scope="col">Total</th>
+            <th scope="col">GPA</th>
+            <th scope="col">Grade</th>
+            <th scope="col">Percentage</th>
+           
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<docs.length; i++) {%>
+            <tr>
+              <th scope="row"><%=docs[i].roll%></th>
+              <td><%=docs[i].name%></td>
+              <td><%=docs[i].engT%></td>
+              <td><%=docs[i].nepT%></td>
+              <td><%=docs[i].sciT%></td>
+              <td><%=docs[i].mth%></td>
+              <td><%=docs[i].socT%></td>
+              <td><%=docs[i].ephT%></td>
+              <td><%=docs[i].optM%></td>
+              <td><%=docs[i].hlthT%></td>
+              <td><%=docs[i].gained%></td>
+              <td><%=docs[i].gpa%></td>
+              <td><%=docs[i].grade%></td>
+              <td><%=docs[i].prcntg%></td>
+              <td><a href="/marksheet/<%=docs[i]._id%>">View</a></td>
+            </tr>
+         <% } %>
+         
+         
+        </tbody>
+      </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
